@@ -1,5 +1,6 @@
 It is a good idea would be to put few words in there
 
+LOG:
 dalia.dauciuniene@LTUGPLTP0027 MINGW64 ~/Documents/Git (master)
 $ git log
 commit cad4af16ead1a13a7f1782acdb0948d95bb0d469 (HEAD -> master, Feature_D, Feature_C)
