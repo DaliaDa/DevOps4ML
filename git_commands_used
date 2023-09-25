@@ -1,0 +1,16 @@
+cd
+mkdir
+git init
+touch
+vim
+git add
+git commit -m ""
+git checkout
+git blanch
+git merge
+git diff
+git log
+git remote set-url origin (didn't work)
+git remote add origin
+git branch -M
+git push -u origin
