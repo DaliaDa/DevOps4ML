@@ -1,16 +1,103 @@
-cd
-mkdir
+#Task:
+As a junior DevOps engineer, you have a message from your Team Lead. He wants a list of commands which could be used in different scenarios to achieve the next things.
+
+Please use your gitlab\github account for this task. 
+
+To do:
+
+ ** Create a new branch with git and manage branches. (To merge.)
+
+Install Gitbash
+Initialize a new local repository with README.MD file. It is a good idea would be to put few words in there, use Markdown for proper syntax.
+Create 3 versions of master branch with names Feature A/B/C
+Make different changes there and commit them
+Copy all Feature versions in another branch D and make changes there
+Merge Feature D branch to master branch 
+Check if you have all changes in master branch
+Check what was changed and what was added commit by commit. You could play more with branches and code changes in your local repo to be more familiar with the background processes of GIT
+Change git to a remote origin which is your gitlab/github account. Make sure your remote repository is accessible for team
+
+#open git bash
+# path to directory
+cd /Documents
+#create repository
+mkdir Git
+
+#go in it
+cd Git
+
+#initialize a new created repository
 git init
-touch
-vim
-git add
+
+#create readme.md file
+touch readme.md
+
+#add some changes in there
+vim readme.md
+
+#add to staging area:
+git add readme.md
+
+#commit changes to the Git repository + "commit messege"
 git commit -m ""
-git checkout
-git blanch
-git merge
-git diff
-git log
-git remote set-url origin (didn't work)
-git remote add origin
-git branch -M
-git push -u origin
+
+#to be sure you're in right branch
+git checkout master
+
+#create Feature_A branch
+git branch Feature A
+
+#switch to Feature_A
+git checkout Feature_A
+
+#make some changes/create a file there
+touch changes.txt
+
+commit changes with a "messege"
+git commit -m ""
+
+#create Feature_B and switch to it / make some changes/ treate file
+git checkout -b Feature_B
+touch text1.txt
+
+#merge changes and commit in Feature_B + "commit messege"
+git commit -m ""
+
+#create Feature_C branch and switch to it / make some changes
+git checkout -b Feature_C
+touch text2.txt
+
+#merge changes and commit in Feature_C branch + "commit messege"
+git commit -m ""
+
+#ensure in the right branch
+git checkout master
+
+#create a new branch Feature_D
+git checkout -b Feature_D
+
+#Merging in Feature_B branch
+git merge Feature_A
+git merge Feature_B
+git merge Feature_C
+
+#commiting changes:
+git commit -m "commit message"
+
+#from the master branch
+git checkout master
+
+#merge the Feature_D into master
+git merge Feature_D
+git commit -m "commit message"
+
+#check that all changes is done:
+git diff master..Feature_D
+git log main..Feature_D
+
+#navigate to local git repository and change the remote origin to GitHub
+git remote add origin <paste here GitHub repository url from GitHub) 
+git branch -M master
+git push -u origin master
+
+#Done!
